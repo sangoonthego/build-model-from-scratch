@@ -10,7 +10,7 @@ X, y = generate_data(sample_nums=100, feature_nums=1, noise=5)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # train model
-linear_model = LinearRegression(learning_rate=0.0001, iter_nums=1000, normalize=True)
+linear_model = LinearRegression(learning_rate=0.0001, iter_nums=1000, convergence_tol=1e-6, normalize=True)
 linear_model.fit(X_train, y_train)
 y_pred = linear_model.predict(X_train)
 
