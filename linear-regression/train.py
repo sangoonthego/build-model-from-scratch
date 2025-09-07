@@ -15,7 +15,9 @@ linear_model.fit(X_train, y_train)
 y_pred = linear_model.predict(X_train)
 
 print(f"Weights: w = {linear_model.w.flatten()}, Bias: b = {linear_model.b:.2f}")
+print(X_train.shape, y_train.shape)  # (16, 1) (16, 1)
+print(X_test.shape, y_test.shape)
 
 # visualize
-plot_linear_regression(X_train, y_train, y_pred)
-plot_learning_curve(linear_model)
+# plot_linear_regression(X_train, y_train, y_pred)
+# plot_learning_curve(linear_model)
